@@ -14,8 +14,8 @@ namespace SpeachLibraryTest
 {
     public partial class SpeachLibraryTestForm : Form
     {
-        private bool propertieChanged; //Indicates that one of the program properties was changed by user
-        private bool isDebug; //This flag specifies debug mode, meaning logs will be written into Output console
+        public bool propertieChanged; //Indicates that one of the program properties was changed by user
+        public bool isDebug; //This flag specifies debug mode, meaning logs will be written into Output console
         private SpeechSynthesizer speechSynthesizer; //Provides access to the functionality of an installed a speech synthesis engine.
 
         public SpeachLibraryTestForm()
@@ -59,9 +59,9 @@ namespace SpeachLibraryTest
         /// Set isDebug mode.
         /// Enable/disable logs output visibility.
         /// </summary>
-        private void SetDebugMode() {
+        public void SetDebugMode() {
             isDebug = checkBoxDebugMode.Checked;
-            textBoxLogs.Visible = isDebug;
+            this.textBoxLogs.Visible = isDebug;
         }
 
         /// <summary>

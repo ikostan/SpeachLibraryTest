@@ -340,8 +340,8 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonApplayChanges;
         private System.Windows.Forms.GroupBox groupBoxDebugMode;
-        private System.Windows.Forms.CheckBox checkBoxDebugMode;
-        private System.Windows.Forms.TextBox textBoxLogs;
+        public System.Windows.Forms.CheckBox checkBoxDebugMode;
+        public System.Windows.Forms.TextBox textBoxLogs;
         private System.Windows.Forms.GroupBox groupBoxLogs;
         private System.Windows.Forms.Button buttonPlaySample;
     }
