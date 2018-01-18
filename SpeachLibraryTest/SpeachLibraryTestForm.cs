@@ -24,10 +24,33 @@ namespace SpeachLibraryTest
                 InitializeComponent();
                 SetDebugMode(); //Set debug mode
             }
-            catch (Exception ex){
+            catch (Exception ex) {
                 //Shows error message
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// Set VoiceGender: Male, Female, Not Set, Neutral
+        /// </summary>
+        private void SetVoiceGender(){
+
+            if (radioButtonGenderMale.Checked)
+            {
+                speechSynthesizer.SelectVoiceByHints(VoiceGender.Male);
+            }
+            else if (radioButtonGenderfemale.Checked)
+            {
+                speechSynthesizer.SelectVoiceByHints(VoiceGender.Female);
+            }
+            else if (radioButtonGenderNeutral.Checked)
+            {
+                speechSynthesizer.SelectVoiceByHints(VoiceGender.Neutral);
+            }
+            else {
+                speechSynthesizer.SelectVoiceByHints(VoiceGender.NotSet);
+            }
+
         }
 
         /// <summary>
@@ -141,6 +164,7 @@ namespace SpeachLibraryTest
         {
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
             SetDebugMode(); //Set debug mode
+            SetVoiceGender(); //Set Voice gender
         }
 
         //End of class
