@@ -75,6 +75,7 @@ namespace SpeachLibraryTest
             string volume = speechSynthesizer.Volume.ToString();
             string state = speechSynthesizer.State.ToString();
 
+            //Debug only:
             if (isDebug) {
                 string log = $"\nSpeech Synthesizer properties => gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}";
                 WriteDebug(this, System.Reflection.MethodBase.GetCurrentMethod().Name, log);
@@ -89,7 +90,7 @@ namespace SpeachLibraryTest
         private void buttonClose_Click(object sender, EventArgs e)
         {
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
-            this.Close();
+            this.Close(); //Close the app
         }
 
         /// <summary>
@@ -121,14 +122,14 @@ namespace SpeachLibraryTest
 
         /// <summary>
         /// Event handler for buttonPlay control.
-        /// Plays the text from textBoxUserInput control.
+        /// Plays the text from textBoxUserInput control (or sample text in case isTest == true).
         /// Shows error message in case textBoxUserInput is empty.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            PlayText(sender, false); 
+            PlayText(sender, false); //Play the text entered (or sample text in case isTest == true)
         }
 
         /// <summary>
