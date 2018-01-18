@@ -161,7 +161,7 @@
             this.groupBoxPlayerProperties.Controls.Add(this.groupBoxGender);
             this.groupBoxPlayerProperties.Location = new System.Drawing.Point(20, 15);
             this.groupBoxPlayerProperties.Name = "groupBoxPlayerProperties";
-            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 248);
+            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 255);
             this.groupBoxPlayerProperties.TabIndex = 6;
             this.groupBoxPlayerProperties.TabStop = false;
             this.groupBoxPlayerProperties.Text = "Player properties";
@@ -224,7 +224,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(581, 446);
+            this.buttonClose.Location = new System.Drawing.Point(597, 446);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 0;
