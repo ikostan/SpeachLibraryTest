@@ -148,6 +148,7 @@
             this.tabPageProperties.TabIndex = 2;
             this.tabPageProperties.Text = "Properties";
             this.tabPageProperties.UseVisualStyleBackColor = true;
+            this.tabPageProperties.Leave += new System.EventHandler(this.tabPageProperties_Leave);
             // 
             // groupBoxPlayerProperties
             // 

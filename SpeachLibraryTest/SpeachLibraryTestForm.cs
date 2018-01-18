@@ -182,6 +182,24 @@ namespace SpeachLibraryTest
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, propertieChanged.ToString()); //Debug only
         }
 
+        /// <summary>
+        /// Event handler that activated when user closes "Properties" tab.
+        /// Warning message will be displayed in case program properties were changed but were not applayed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tabPageProperties_Leave(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
+
+            if (propertieChanged) {
+                MessageBox.Show("Program properties were changed.\nPlease go back to 'Properties' tab and press on 'Applay' button if you want to applay a new changes.",
+                    "WARNING",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
         //End of class
     }
 }
