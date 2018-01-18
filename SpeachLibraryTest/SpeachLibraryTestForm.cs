@@ -124,6 +124,18 @@ namespace SpeachLibraryTest
             textBoxUserInput.Text = "";
         }
 
+        /// <summary>
+        /// Event handler for buttonApplayChanges control.
+        /// Set a new properties.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonApplayChanges_Click(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
+
+        }
+
         //End of class
     }
 }

@@ -44,6 +44,7 @@
             this.radioButtonGenderfemale = new System.Windows.Forms.RadioButton();
             this.radioButtonGenderMale = new System.Windows.Forms.RadioButton();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonApplayChanges = new System.Windows.Forms.Button();
             this.tabControlManualPlayer.SuspendLayout();
             this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
@@ -146,10 +147,11 @@
             // 
             // groupBoxPlayerProperties
             // 
+            this.groupBoxPlayerProperties.Controls.Add(this.buttonApplayChanges);
             this.groupBoxPlayerProperties.Controls.Add(this.groupBoxGender);
             this.groupBoxPlayerProperties.Location = new System.Drawing.Point(20, 15);
             this.groupBoxPlayerProperties.Name = "groupBoxPlayerProperties";
-            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 237);
+            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 238);
             this.groupBoxPlayerProperties.TabIndex = 6;
             this.groupBoxPlayerProperties.TabStop = false;
             this.groupBoxPlayerProperties.Text = "Player properties";
@@ -219,6 +221,16 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // buttonApplayChanges
+            // 
+            this.buttonApplayChanges.Location = new System.Drawing.Point(539, 209);
+            this.buttonApplayChanges.Name = "buttonApplayChanges";
+            this.buttonApplayChanges.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplayChanges.TabIndex = 1;
+            this.buttonApplayChanges.Text = "Applay";
+            this.buttonApplayChanges.UseVisualStyleBackColor = true;
+            this.buttonApplayChanges.Click += new System.EventHandler(this.buttonApplayChanges_Click);
+            // 
             // SpeachLibraryTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +270,7 @@
         private System.Windows.Forms.RadioButton radioButtonGenderfemale;
         private System.Windows.Forms.RadioButton radioButtonGenderMale;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonApplayChanges;
     }
 }
 
