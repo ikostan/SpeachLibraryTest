@@ -67,14 +67,18 @@ namespace SpeachLibraryTest
         /// Display SpeechSynthesizer Properties: gender, age
         /// </summary>
         private void DisplaySpeechSynthesizerProperties() {
+
+            //Speech Synthesizer properties:
             string gender = speechSynthesizer.Voice.Gender.ToString();
             string age = speechSynthesizer.Voice.Age.ToString();
             string rate = speechSynthesizer.Rate.ToString();
             string volume = speechSynthesizer.Volume.ToString();
             string state = speechSynthesizer.State.ToString();
 
-            System.Diagnostics.Debug.WriteLine(
-                $"Speech Synthesizer properties: gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}");
+            if (isDebug) {
+                string log = $"Speech Synthesizer properties: gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}";
+                WriteDebug(null, System.Reflection.MethodBase.GetCurrentMethod().Name, log);
+            }
         }
 
         /// <summary>
