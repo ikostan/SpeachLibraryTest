@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileReader.cs" />
     <Compile Include="SpeachLibraryTestForm.cs">
       <SubType>Form</SubType>
     </Compile>

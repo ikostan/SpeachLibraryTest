@@ -19,7 +19,7 @@ namespace UnitTestProperties
         [TestMethod]
         public void DebugModeDefaultTest()
         {
-            //Default state Visible == false
+            //Default state Visible == false, DebugMode == false
             form.SetDebugMode();
             Assert.IsFalse(form.textBoxLogs.Visible);
             Assert.IsFalse(form.checkBoxDebugMode.Checked);
@@ -29,7 +29,7 @@ namespace UnitTestProperties
         [TestMethod]
         public void DebugModeTrueTest()
         {
-            //Make textBoxLogs visible
+            //Make DebugMode true
             form.checkBoxDebugMode.Checked = true;
             Assert.IsTrue(form.checkBoxDebugMode.Checked);
             form.SetDebugMode();
@@ -39,7 +39,7 @@ namespace UnitTestProperties
         [TestMethod]
         public void DebugModeFalseTest()
         {
-            //Make textBoxLogs invisible
+            //Make DebugMode false
             form.checkBoxDebugMode.Checked = false;
             Assert.IsFalse(form.checkBoxDebugMode.Checked);
             form.SetDebugMode();
