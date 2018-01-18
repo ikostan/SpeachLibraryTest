@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Speech.Synthesis;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -164,7 +165,17 @@ namespace SpeachLibraryTest
                     System.Diagnostics.Debug.Print($"DEBUG: phrase to play => {phrase}");
                 }
 
-                speechSynthesizer.Speak(phrase); //Play the phrase
+                //Play the phrase in separate thread:
+
+                /*
+                new Thread(delegate () {
+                    speechSynthesizer.Speak(phrase); //Play the phrase
+                }).Start();
+                */
+
+                //Task.Factory.StartNew(() => { speechSynthesizer.Speak(phrase); });
+
+                ThreadPool.QueueUserWorkItem(state => speechSynthesizer.Speak(phrase));
             }
             else
             {
