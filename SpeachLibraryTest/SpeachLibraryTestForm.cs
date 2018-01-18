@@ -55,10 +55,12 @@ namespace SpeachLibraryTest
         }
 
         /// <summary>
-        /// Set isDebug mode glag
+        /// Set isDebug mode.
+        /// Enable/disable logs output visibility.
         /// </summary>
         private void SetDebugMode() {
             isDebug = checkBoxDebugMode.Checked;
+            groupBoxLogs.Visible = isDebug;
         }
 
         /// <summary>
@@ -94,7 +96,10 @@ namespace SpeachLibraryTest
         private void WriteDebug(object sender, string message, string parameter = "") {
             //Debug only:
             if (isDebug) {
-                System.Diagnostics.Debug.Print($"DEBUG: {sender.GetType().Name} => {message}, parameter: {parameter}");
+                DateTime time = DateTime.Now;
+                string log = $"{time.Date}, {time.Hour}:{time.Minute}:{time.Second} - DEBUG: {sender.GetType().Name} => {message}, parameter: {parameter}\n";
+                System.Diagnostics.Debug.Print(log);
+                textBoxLogs.AppendText(log);
             }
         }
 

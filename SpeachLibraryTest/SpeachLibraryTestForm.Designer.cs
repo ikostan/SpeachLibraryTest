@@ -47,6 +47,8 @@
             this.buttonApplayChanges = new System.Windows.Forms.Button();
             this.groupBoxDebugMode = new System.Windows.Forms.GroupBox();
             this.checkBoxDebugMode = new System.Windows.Forms.CheckBox();
+            this.textBoxLogs = new System.Windows.Forms.TextBox();
+            this.groupBoxLogs = new System.Windows.Forms.GroupBox();
             this.tabControlManualPlayer.SuspendLayout();
             this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
@@ -54,6 +56,7 @@
             this.groupBoxPlayerProperties.SuspendLayout();
             this.groupBoxGender.SuspendLayout();
             this.groupBoxDebugMode.SuspendLayout();
+            this.groupBoxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlManualPlayer
@@ -219,7 +222,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(581, 394);
+            this.buttonClose.Location = new System.Drawing.Point(581, 429);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 0;
@@ -258,11 +261,33 @@
             this.checkBoxDebugMode.Text = "True";
             this.checkBoxDebugMode.UseVisualStyleBackColor = true;
             // 
+            // textBoxLogs
+            // 
+            this.textBoxLogs.Location = new System.Drawing.Point(6, 19);
+            this.textBoxLogs.Multiline = true;
+            this.textBoxLogs.Name = "textBoxLogs";
+            this.textBoxLogs.ReadOnly = true;
+            this.textBoxLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxLogs.Size = new System.Drawing.Size(644, 40);
+            this.textBoxLogs.TabIndex = 8;
+            // 
+            // groupBoxLogs
+            // 
+            this.groupBoxLogs.Controls.Add(this.textBoxLogs);
+            this.groupBoxLogs.Location = new System.Drawing.Point(16, 349);
+            this.groupBoxLogs.Name = "groupBoxLogs";
+            this.groupBoxLogs.Size = new System.Drawing.Size(656, 65);
+            this.groupBoxLogs.TabIndex = 9;
+            this.groupBoxLogs.TabStop = false;
+            this.groupBoxLogs.Text = "Logs:";
+            this.groupBoxLogs.Visible = false;
+            // 
             // SpeachLibraryTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 429);
+            this.ClientSize = new System.Drawing.Size(680, 464);
+            this.Controls.Add(this.groupBoxLogs);
             this.Controls.Add(this.tabControlManualPlayer);
             this.Controls.Add(this.buttonClose);
             this.Name = "SpeachLibraryTestForm";
@@ -277,6 +302,8 @@
             this.groupBoxGender.PerformLayout();
             this.groupBoxDebugMode.ResumeLayout(false);
             this.groupBoxDebugMode.PerformLayout();
+            this.groupBoxLogs.ResumeLayout(false);
+            this.groupBoxLogs.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,6 +329,8 @@
         private System.Windows.Forms.Button buttonApplayChanges;
         private System.Windows.Forms.GroupBox groupBoxDebugMode;
         private System.Windows.Forms.CheckBox checkBoxDebugMode;
+        private System.Windows.Forms.TextBox textBoxLogs;
+        private System.Windows.Forms.GroupBox groupBoxLogs;
     }
 }
 
