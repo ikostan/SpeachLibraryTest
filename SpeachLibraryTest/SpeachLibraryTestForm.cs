@@ -61,7 +61,7 @@ namespace SpeachLibraryTest
         /// </summary>
         private void SetDebugMode() {
             isDebug = checkBoxDebugMode.Checked;
-            groupBoxLogs.Visible = isDebug;
+            textBoxLogs.Visible = isDebug;
         }
 
         /// <summary>

@@ -224,7 +224,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(581, 429);
+            this.buttonClose.Location = new System.Drawing.Point(581, 446);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 0;
@@ -270,19 +270,19 @@
             this.textBoxLogs.Name = "textBoxLogs";
             this.textBoxLogs.ReadOnly = true;
             this.textBoxLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxLogs.Size = new System.Drawing.Size(644, 40);
+            this.textBoxLogs.Size = new System.Drawing.Size(644, 66);
             this.textBoxLogs.TabIndex = 8;
+            this.textBoxLogs.Visible = false;
             // 
             // groupBoxLogs
             // 
             this.groupBoxLogs.Controls.Add(this.textBoxLogs);
             this.groupBoxLogs.Location = new System.Drawing.Point(12, 349);
             this.groupBoxLogs.Name = "groupBoxLogs";
-            this.groupBoxLogs.Size = new System.Drawing.Size(660, 65);
+            this.groupBoxLogs.Size = new System.Drawing.Size(660, 91);
             this.groupBoxLogs.TabIndex = 9;
             this.groupBoxLogs.TabStop = false;
             this.groupBoxLogs.Text = "Logs:";
-            this.groupBoxLogs.Visible = false;
             // 
             // buttonPlaySample
             // 
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 464);
+            this.ClientSize = new System.Drawing.Size(685, 481);
             this.Controls.Add(this.groupBoxLogs);
             this.Controls.Add(this.tabControlManualPlayer);
             this.Controls.Add(this.buttonClose);
