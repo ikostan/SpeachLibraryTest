@@ -150,8 +150,7 @@ namespace SpeachLibraryTest
                     "oftentimes we are required to make our designs look as finished as possible. " +
                     "For example, if you are designing a brand new website for someone, " +
                     "most times you will have to make sure the prototype looks finished by inserting text or " +
-                    "photos or what have you.The purpose of this is so the person viewing the prototype has " +
-                    "a chance to actually feel and understand the idea behind what you have created.";
+                    "photos or what have you.";
             }
 
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, phrase); //Debug only
