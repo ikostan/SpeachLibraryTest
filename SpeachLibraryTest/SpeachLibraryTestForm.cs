@@ -76,8 +76,8 @@ namespace SpeachLibraryTest
             string state = speechSynthesizer.State.ToString();
 
             if (isDebug) {
-                string log = $"Speech Synthesizer properties: gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}";
-                WriteDebug(null, System.Reflection.MethodBase.GetCurrentMethod().Name, log);
+                string log = $"\nSpeech Synthesizer properties => gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}";
+                WriteDebug(this, System.Reflection.MethodBase.GetCurrentMethod().Name, log);
             }
         }
 
@@ -101,7 +101,7 @@ namespace SpeachLibraryTest
             //Debug only:
             if (isDebug) {
                 DateTime time = DateTime.Now;
-                string log = $"{time.Date}, {time.Hour}:{time.Minute}:{time.Second} - DEBUG: {sender.GetType().Name} => {message}, parameter: {parameter}\n";
+                string log = $"{time.Date.ToString("dd/MM/yyyy")} - {time.Hour}:{time.Minute}:{time.Second} - DEBUG: {sender.GetType().Name} => {message}, parameter: {parameter}\n";
                 System.Diagnostics.Debug.Print(log);
                 textBoxLogs.AppendText(log);
             }

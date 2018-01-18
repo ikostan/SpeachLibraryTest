@@ -274,9 +274,9 @@
             // groupBoxLogs
             // 
             this.groupBoxLogs.Controls.Add(this.textBoxLogs);
-            this.groupBoxLogs.Location = new System.Drawing.Point(16, 349);
+            this.groupBoxLogs.Location = new System.Drawing.Point(12, 349);
             this.groupBoxLogs.Name = "groupBoxLogs";
-            this.groupBoxLogs.Size = new System.Drawing.Size(656, 65);
+            this.groupBoxLogs.Size = new System.Drawing.Size(660, 65);
             this.groupBoxLogs.TabIndex = 9;
             this.groupBoxLogs.TabStop = false;
             this.groupBoxLogs.Text = "Logs:";
