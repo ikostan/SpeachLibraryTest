@@ -172,6 +172,7 @@
             this.groupBoxGender.TabIndex = 0;
             this.groupBoxGender.TabStop = false;
             this.groupBoxGender.Text = "Gender:";
+            this.groupBoxGender.Enter += new System.EventHandler(this.SetingsChanged);
             // 
             // radioButtonGenderNotSet
             // 
@@ -244,6 +245,7 @@
             this.groupBoxDebugMode.TabIndex = 2;
             this.groupBoxDebugMode.TabStop = false;
             this.groupBoxDebugMode.Text = "Debug Mode:";
+            this.groupBoxDebugMode.Enter += new System.EventHandler(this.SetingsChanged);
             // 
             // checkBoxDebugMode
             // 

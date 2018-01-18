@@ -13,6 +13,7 @@ namespace SpeachLibraryTest
 {
     public partial class SpeachLibraryTestForm : Form
     {
+        private bool propertieChanged; //Indicates that one of the program properties was changed by user
         private bool isDebug; //This flag specifies debug mode, meaning logs will be written into Output console
         private SpeechSynthesizer speechSynthesizer; //Provides access to the functionality of an installed a speech synthesis engine.
 
@@ -21,6 +22,7 @@ namespace SpeachLibraryTest
             try
             {
                 speechSynthesizer = new SpeechSynthesizer();
+                propertieChanged = false;
                 InitializeComponent();
                 SetDebugMode(); //Set debug mode
             }
@@ -70,7 +72,7 @@ namespace SpeachLibraryTest
             string state = speechSynthesizer.State.ToString();
 
             System.Diagnostics.Debug.WriteLine(
-                $"Speech Synthesizer properties:\n gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}");
+                $"Speech Synthesizer properties: gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}");
         }
 
         /// <summary>
@@ -167,8 +169,17 @@ namespace SpeachLibraryTest
         private void buttonApplayChanges_Click(object sender, EventArgs e)
         {
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
+            propertieChanged = false;
             SetDebugMode(); //Set debug mode
             SetVoiceGender(); //Set Voice gender
+        }
+
+        /// <summary>
+        /// SetingsChanged is activated when one of the properties was changed
+        /// </summary>
+        private void SetingsChanged(object sender, EventArgs e) {
+            propertieChanged = true;
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, propertieChanged.ToString()); //Debug only
         }
 
         //End of class
