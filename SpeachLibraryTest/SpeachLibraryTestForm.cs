@@ -50,7 +50,6 @@ namespace SpeachLibraryTest
             else {
                 speechSynthesizer.SelectVoiceByHints(VoiceGender.NotSet);
             }
-
         }
 
         /// <summary>
@@ -64,10 +63,14 @@ namespace SpeachLibraryTest
         /// Display SpeechSynthesizer Properties: gender, age
         /// </summary>
         private void DisplaySpeechSynthesizerProperties() {
-            //VoiceGender.
-            String gender = speechSynthesizer.Voice.Gender.ToString();
-            String age = speechSynthesizer.Voice.Age.ToString();
-            System.Diagnostics.Debug.Write($"Speech Synthesizer properties:\n gender: {gender}, age: {age}");
+            string gender = speechSynthesizer.Voice.Gender.ToString();
+            string age = speechSynthesizer.Voice.Age.ToString();
+            string rate = speechSynthesizer.Rate.ToString();
+            string volume = speechSynthesizer.Volume.ToString();
+            string state = speechSynthesizer.State.ToString();
+
+            System.Diagnostics.Debug.WriteLine(
+                $"Speech Synthesizer properties:\n gender: {gender}, age: {age}, rate: {rate}, volume: {volume}, state: {state}");
         }
 
         /// <summary>
@@ -77,7 +80,7 @@ namespace SpeachLibraryTest
         /// <param name="e"></param>
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
             this.Close();
         }
 
@@ -86,10 +89,10 @@ namespace SpeachLibraryTest
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="message"></param>
-        private void WriteDebug(object sender, string message) {
+        private void WriteDebug(object sender, string message, string parameter = "") {
             //Debug only:
             if (isDebug) {
-                System.Diagnostics.Debug.Print($"DEBUG: {sender.GetType().Name} => {message}");
+                System.Diagnostics.Debug.Print($"DEBUG: {sender.GetType().Name} => {message}, parameter: {parameter}");
             }
         }
 
@@ -116,9 +119,10 @@ namespace SpeachLibraryTest
         {
             //Debug only:
             DisplaySpeechSynthesizerProperties();
-            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name);
 
             String phrase = GetUserInput(); //get the frase user wants to play
+
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, phrase); //Debug only
 
             if (!phrase.Equals(""))
             {
@@ -150,7 +154,7 @@ namespace SpeachLibraryTest
         /// <param name="e"></param>
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, "clear user input"); //Debug only
             textBoxUserInput.Text = "";
         }
 
@@ -162,7 +166,7 @@ namespace SpeachLibraryTest
         /// <param name="e"></param>
         private void buttonApplayChanges_Click(object sender, EventArgs e)
         {
-            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
             SetDebugMode(); //Set debug mode
             SetVoiceGender(); //Set Voice gender
         }
