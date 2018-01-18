@@ -21,13 +21,20 @@ namespace SpeachLibraryTest
             try
             {
                 speechSynthesizer = new SpeechSynthesizer();
-                isDebug = true;
                 InitializeComponent();
+                SetDebugMode(); //Set debug mode
             }
             catch (Exception ex){
                 //Shows error message
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// Set isDebug mode glag
+        /// </summary>
+        private void SetDebugMode() {
+            isDebug = checkBoxDebugMode.Checked;
         }
 
         /// <summary>
@@ -47,7 +54,7 @@ namespace SpeachLibraryTest
         /// <param name="e"></param>
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name);
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
             this.Close();
         }
 
@@ -133,7 +140,7 @@ namespace SpeachLibraryTest
         private void buttonApplayChanges_Click(object sender, EventArgs e)
         {
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name); //Debug only
-
+            SetDebugMode(); //Set debug mode
         }
 
         //End of class

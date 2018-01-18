@@ -45,12 +45,15 @@
             this.radioButtonGenderMale = new System.Windows.Forms.RadioButton();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonApplayChanges = new System.Windows.Forms.Button();
+            this.groupBoxDebugMode = new System.Windows.Forms.GroupBox();
+            this.checkBoxDebugMode = new System.Windows.Forms.CheckBox();
             this.tabControlManualPlayer.SuspendLayout();
             this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
             this.tabPageProperties.SuspendLayout();
             this.groupBoxPlayerProperties.SuspendLayout();
             this.groupBoxGender.SuspendLayout();
+            this.groupBoxDebugMode.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlManualPlayer
@@ -61,7 +64,7 @@
             this.tabControlManualPlayer.Location = new System.Drawing.Point(12, 12);
             this.tabControlManualPlayer.Name = "tabControlManualPlayer";
             this.tabControlManualPlayer.SelectedIndex = 0;
-            this.tabControlManualPlayer.Size = new System.Drawing.Size(664, 295);
+            this.tabControlManualPlayer.Size = new System.Drawing.Size(664, 331);
             this.tabControlManualPlayer.TabIndex = 7;
             // 
             // tabPageManualPlayer
@@ -70,7 +73,7 @@
             this.tabPageManualPlayer.Location = new System.Drawing.Point(4, 22);
             this.tabPageManualPlayer.Name = "tabPageManualPlayer";
             this.tabPageManualPlayer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageManualPlayer.Size = new System.Drawing.Size(656, 269);
+            this.tabPageManualPlayer.Size = new System.Drawing.Size(656, 305);
             this.tabPageManualPlayer.TabIndex = 0;
             this.tabPageManualPlayer.Text = "Manual Player";
             this.tabPageManualPlayer.UseVisualStyleBackColor = true;
@@ -129,7 +132,7 @@
             this.tabPagePlayFromText.Location = new System.Drawing.Point(4, 22);
             this.tabPagePlayFromText.Name = "tabPagePlayFromText";
             this.tabPagePlayFromText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePlayFromText.Size = new System.Drawing.Size(656, 269);
+            this.tabPagePlayFromText.Size = new System.Drawing.Size(656, 305);
             this.tabPagePlayFromText.TabIndex = 1;
             this.tabPagePlayFromText.Text = "Play Text File";
             this.tabPagePlayFromText.UseVisualStyleBackColor = true;
@@ -137,21 +140,22 @@
             // tabPageProperties
             // 
             this.tabPageProperties.Controls.Add(this.groupBoxPlayerProperties);
+            this.tabPageProperties.Controls.Add(this.buttonApplayChanges);
             this.tabPageProperties.Location = new System.Drawing.Point(4, 22);
             this.tabPageProperties.Name = "tabPageProperties";
             this.tabPageProperties.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProperties.Size = new System.Drawing.Size(656, 269);
+            this.tabPageProperties.Size = new System.Drawing.Size(656, 305);
             this.tabPageProperties.TabIndex = 2;
             this.tabPageProperties.Text = "Properties";
             this.tabPageProperties.UseVisualStyleBackColor = true;
             // 
             // groupBoxPlayerProperties
             // 
-            this.groupBoxPlayerProperties.Controls.Add(this.buttonApplayChanges);
+            this.groupBoxPlayerProperties.Controls.Add(this.groupBoxDebugMode);
             this.groupBoxPlayerProperties.Controls.Add(this.groupBoxGender);
             this.groupBoxPlayerProperties.Location = new System.Drawing.Point(20, 15);
             this.groupBoxPlayerProperties.Name = "groupBoxPlayerProperties";
-            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 238);
+            this.groupBoxPlayerProperties.Size = new System.Drawing.Size(620, 248);
             this.groupBoxPlayerProperties.TabIndex = 6;
             this.groupBoxPlayerProperties.TabStop = false;
             this.groupBoxPlayerProperties.Text = "Player properties";
@@ -162,7 +166,7 @@
             this.groupBoxGender.Controls.Add(this.radioButtonGenderNeutral);
             this.groupBoxGender.Controls.Add(this.radioButtonGenderfemale);
             this.groupBoxGender.Controls.Add(this.radioButtonGenderMale);
-            this.groupBoxGender.Location = new System.Drawing.Point(20, 31);
+            this.groupBoxGender.Location = new System.Drawing.Point(15, 19);
             this.groupBoxGender.Name = "groupBoxGender";
             this.groupBoxGender.Size = new System.Drawing.Size(94, 140);
             this.groupBoxGender.TabIndex = 0;
@@ -213,7 +217,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(597, 313);
+            this.buttonClose.Location = new System.Drawing.Point(581, 394);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 0;
@@ -223,7 +227,7 @@
             // 
             // buttonApplayChanges
             // 
-            this.buttonApplayChanges.Location = new System.Drawing.Point(539, 209);
+            this.buttonApplayChanges.Location = new System.Drawing.Point(565, 276);
             this.buttonApplayChanges.Name = "buttonApplayChanges";
             this.buttonApplayChanges.Size = new System.Drawing.Size(75, 23);
             this.buttonApplayChanges.TabIndex = 1;
@@ -231,11 +235,31 @@
             this.buttonApplayChanges.UseVisualStyleBackColor = true;
             this.buttonApplayChanges.Click += new System.EventHandler(this.buttonApplayChanges_Click);
             // 
+            // groupBoxDebugMode
+            // 
+            this.groupBoxDebugMode.Controls.Add(this.checkBoxDebugMode);
+            this.groupBoxDebugMode.Location = new System.Drawing.Point(15, 166);
+            this.groupBoxDebugMode.Name = "groupBoxDebugMode";
+            this.groupBoxDebugMode.Size = new System.Drawing.Size(94, 66);
+            this.groupBoxDebugMode.TabIndex = 2;
+            this.groupBoxDebugMode.TabStop = false;
+            this.groupBoxDebugMode.Text = "Debug Mode:";
+            // 
+            // checkBoxDebugMode
+            // 
+            this.checkBoxDebugMode.AutoSize = true;
+            this.checkBoxDebugMode.Location = new System.Drawing.Point(22, 30);
+            this.checkBoxDebugMode.Name = "checkBoxDebugMode";
+            this.checkBoxDebugMode.Size = new System.Drawing.Size(48, 17);
+            this.checkBoxDebugMode.TabIndex = 0;
+            this.checkBoxDebugMode.Text = "True";
+            this.checkBoxDebugMode.UseVisualStyleBackColor = true;
+            // 
             // SpeachLibraryTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 348);
+            this.ClientSize = new System.Drawing.Size(680, 429);
             this.Controls.Add(this.tabControlManualPlayer);
             this.Controls.Add(this.buttonClose);
             this.Name = "SpeachLibraryTestForm";
@@ -248,6 +272,8 @@
             this.groupBoxPlayerProperties.ResumeLayout(false);
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
+            this.groupBoxDebugMode.ResumeLayout(false);
+            this.groupBoxDebugMode.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -271,6 +297,8 @@
         private System.Windows.Forms.RadioButton radioButtonGenderMale;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonApplayChanges;
+        private System.Windows.Forms.GroupBox groupBoxDebugMode;
+        private System.Windows.Forms.CheckBox checkBoxDebugMode;
     }
 }
 
