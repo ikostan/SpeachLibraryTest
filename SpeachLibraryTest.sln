@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeachLibraryTest", "SpeachLibraryTest\SpeachLibraryTest.csproj", "{90D1BDAA-34D1-48B5-B5DA-41AAB0521089}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeachLibrary", "SpeachLibraryTest\SpeachLibrary.csproj", "{90D1BDAA-34D1-48B5-B5DA-41AAB0521089}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,22 +33,6 @@ Global
 		{90D1BDAA-34D1-48B5-B5DA-41AAB0521089}.Release|x64.Build.0 = Release|Any CPU
 		{90D1BDAA-34D1-48B5-B5DA-41AAB0521089}.Release|x86.ActiveCfg = Release|Any CPU
 		{90D1BDAA-34D1-48B5-B5DA-41AAB0521089}.Release|x86.Build.0 = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|ARM.Build.0 = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|x64.Build.0 = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Debug|x86.Build.0 = Debug|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|ARM.ActiveCfg = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|ARM.Build.0 = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|x64.ActiveCfg = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|x64.Build.0 = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|x86.ActiveCfg = Release|Any CPU
-		{963C6DEB-98D5-4DDB-BBAE-D013DEA457DD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
