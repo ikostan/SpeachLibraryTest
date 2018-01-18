@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tabControlManualPlayer = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageManualPlayer = new System.Windows.Forms.TabPage();
             this.groupBoxPlayer = new System.Windows.Forms.GroupBox();
             this.labelInstructions = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxUserInput = new System.Windows.Forms.TextBox();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPagePlayFromText = new System.Windows.Forms.TabPage();
+            this.tabPageProperties = new System.Windows.Forms.TabPage();
             this.groupBoxPlayerProperties = new System.Windows.Forms.GroupBox();
             this.groupBoxGender = new System.Windows.Forms.GroupBox();
             this.radioButtonGenderNotSet = new System.Windows.Forms.RadioButton();
@@ -45,34 +45,34 @@
             this.radioButtonGenderMale = new System.Windows.Forms.RadioButton();
             this.buttonClose = new System.Windows.Forms.Button();
             this.tabControlManualPlayer.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPageProperties.SuspendLayout();
             this.groupBoxPlayerProperties.SuspendLayout();
             this.groupBoxGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlManualPlayer
             // 
-            this.tabControlManualPlayer.Controls.Add(this.tabPage1);
-            this.tabControlManualPlayer.Controls.Add(this.tabPage2);
-            this.tabControlManualPlayer.Controls.Add(this.tabPage3);
+            this.tabControlManualPlayer.Controls.Add(this.tabPageManualPlayer);
+            this.tabControlManualPlayer.Controls.Add(this.tabPagePlayFromText);
+            this.tabControlManualPlayer.Controls.Add(this.tabPageProperties);
             this.tabControlManualPlayer.Location = new System.Drawing.Point(12, 12);
             this.tabControlManualPlayer.Name = "tabControlManualPlayer";
             this.tabControlManualPlayer.SelectedIndex = 0;
             this.tabControlManualPlayer.Size = new System.Drawing.Size(664, 295);
             this.tabControlManualPlayer.TabIndex = 7;
             // 
-            // tabPage1
+            // tabPageManualPlayer
             // 
-            this.tabPage1.Controls.Add(this.groupBoxPlayer);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(656, 269);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageManualPlayer.Controls.Add(this.groupBoxPlayer);
+            this.tabPageManualPlayer.Location = new System.Drawing.Point(4, 22);
+            this.tabPageManualPlayer.Name = "tabPageManualPlayer";
+            this.tabPageManualPlayer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageManualPlayer.Size = new System.Drawing.Size(656, 269);
+            this.tabPageManualPlayer.TabIndex = 0;
+            this.tabPageManualPlayer.Text = "Manual Player";
+            this.tabPageManualPlayer.UseVisualStyleBackColor = true;
             // 
             // groupBoxPlayer
             // 
@@ -123,26 +123,26 @@
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // tabPage2
+            // tabPagePlayFromText
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(656, 269);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPagePlayFromText.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePlayFromText.Name = "tabPagePlayFromText";
+            this.tabPagePlayFromText.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePlayFromText.Size = new System.Drawing.Size(656, 269);
+            this.tabPagePlayFromText.TabIndex = 1;
+            this.tabPagePlayFromText.Text = "Play Text File";
+            this.tabPagePlayFromText.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabPageProperties
             // 
-            this.tabPage3.Controls.Add(this.groupBoxPlayerProperties);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(656, 269);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageProperties.Controls.Add(this.groupBoxPlayerProperties);
+            this.tabPageProperties.Location = new System.Drawing.Point(4, 22);
+            this.tabPageProperties.Name = "tabPageProperties";
+            this.tabPageProperties.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProperties.Size = new System.Drawing.Size(656, 269);
+            this.tabPageProperties.TabIndex = 2;
+            this.tabPageProperties.Text = "Properties";
+            this.tabPageProperties.UseVisualStyleBackColor = true;
             // 
             // groupBoxPlayerProperties
             // 
@@ -229,10 +229,10 @@
             this.Name = "SpeachLibraryTestForm";
             this.Text = "Speach Library Test";
             this.tabControlManualPlayer.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageManualPlayer.ResumeLayout(false);
             this.groupBoxPlayer.ResumeLayout(false);
             this.groupBoxPlayer.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.tabPageProperties.ResumeLayout(false);
             this.groupBoxPlayerProperties.ResumeLayout(false);
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
@@ -243,14 +243,14 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControlManualPlayer;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageManualPlayer;
         private System.Windows.Forms.GroupBox groupBoxPlayer;
         private System.Windows.Forms.Label labelInstructions;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxUserInput;
         private System.Windows.Forms.Button buttonPlay;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPagePlayFromText;
+        private System.Windows.Forms.TabPage tabPageProperties;
         private System.Windows.Forms.GroupBox groupBoxPlayerProperties;
         private System.Windows.Forms.GroupBox groupBoxGender;
         private System.Windows.Forms.RadioButton radioButtonGenderNotSet;
