@@ -61,7 +61,7 @@ namespace SpeachLibraryTest
         /// </summary>
         public void SetDebugMode() {
             isDebug = checkBoxDebugMode.Checked;
-            this.textBoxLogs.Visible = isDebug;
+            textBoxLogs.Visible = isDebug;
         }
 
         /// <summary>
