@@ -128,17 +128,39 @@ namespace SpeachLibraryTest
         /// <param name="e"></param>
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            //Debug only:
-            DisplaySpeechSynthesizerProperties();
+            PlayText(sender, false); 
+        }
 
-            String phrase = GetUserInput(); //get the frase user wants to play
+        /// <summary>
+        /// Play text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="isTest"></param>
+        private void PlayText(object sender, bool isTest = false) {
+
+            string phrase = "";
+
+            if (isTest == false)
+            {
+                phrase = GetUserInput(); //get the frase user wants to play                
+            }
+            else {
+                //Sample text
+                phrase = "As designers attempting to creating functional work, " +
+                    "oftentimes we are required to make our designs look as finished as possible. " +
+                    "For example, if you are designing a brand new website for someone, " +
+                    "most times you will have to make sure the prototype looks finished by inserting text or " +
+                    "photos or what have you.The purpose of this is so the person viewing the prototype has " +
+                    "a chance to actually feel and understand the idea behind what you have created.";
+            }
 
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, phrase); //Debug only
 
             if (!phrase.Equals(""))
             {
                 //Debug only:
-                if (isDebug) {
+                if (isDebug)
+                {
                     System.Diagnostics.Debug.Print($"DEBUG: phrase to play => {phrase}");
                 }
 
@@ -150,9 +172,9 @@ namespace SpeachLibraryTest
                 textBoxUserInput.Focus();
                 //Shows error message
                 MessageBox.Show(
-                    "Empty string is not allowed. Please re-enter.", 
-                    "ERROR", 
-                    MessageBoxButtons.OK, 
+                    "Empty string is not allowed. Please re-enter.",
+                    "ERROR",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
         }
@@ -207,6 +229,17 @@ namespace SpeachLibraryTest
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// Play sample text event handler.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonPlaySample_Click(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, propertieChanged.ToString()); //Debug only
+            PlayText(sender, true);
         }
 
         //End of class

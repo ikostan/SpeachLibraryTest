@@ -49,6 +49,7 @@
             this.checkBoxDebugMode = new System.Windows.Forms.CheckBox();
             this.textBoxLogs = new System.Windows.Forms.TextBox();
             this.groupBoxLogs = new System.Windows.Forms.GroupBox();
+            this.buttonPlaySample = new System.Windows.Forms.Button();
             this.tabControlManualPlayer.SuspendLayout();
             this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
@@ -142,6 +143,7 @@
             // 
             // tabPageProperties
             // 
+            this.tabPageProperties.Controls.Add(this.buttonPlaySample);
             this.tabPageProperties.Controls.Add(this.groupBoxPlayerProperties);
             this.tabPageProperties.Controls.Add(this.buttonApplayChanges);
             this.tabPageProperties.Location = new System.Drawing.Point(4, 22);
@@ -282,6 +284,16 @@
             this.groupBoxLogs.Text = "Logs:";
             this.groupBoxLogs.Visible = false;
             // 
+            // buttonPlaySample
+            // 
+            this.buttonPlaySample.Location = new System.Drawing.Point(484, 276);
+            this.buttonPlaySample.Name = "buttonPlaySample";
+            this.buttonPlaySample.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlaySample.TabIndex = 7;
+            this.buttonPlaySample.Text = "Play Sample";
+            this.buttonPlaySample.UseVisualStyleBackColor = true;
+            this.buttonPlaySample.Click += new System.EventHandler(this.buttonPlaySample_Click);
+            // 
             // SpeachLibraryTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +343,7 @@
         private System.Windows.Forms.CheckBox checkBoxDebugMode;
         private System.Windows.Forms.TextBox textBoxLogs;
         private System.Windows.Forms.GroupBox groupBoxLogs;
+        private System.Windows.Forms.Button buttonPlaySample;
     }
 }
 
