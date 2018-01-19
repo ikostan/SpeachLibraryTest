@@ -37,26 +37,32 @@
             this.buttonPlay = new System.Windows.Forms.Button();
             this.tabPagePlayFromText = new System.Windows.Forms.TabPage();
             this.tabPageProperties = new System.Windows.Forms.TabPage();
+            this.buttonPlaySample = new System.Windows.Forms.Button();
             this.groupBoxPlayerProperties = new System.Windows.Forms.GroupBox();
+            this.groupBoxDebugMode = new System.Windows.Forms.GroupBox();
+            this.checkBoxDebugMode = new System.Windows.Forms.CheckBox();
             this.groupBoxGender = new System.Windows.Forms.GroupBox();
             this.radioButtonGenderNotSet = new System.Windows.Forms.RadioButton();
             this.radioButtonGenderNeutral = new System.Windows.Forms.RadioButton();
             this.radioButtonGenderfemale = new System.Windows.Forms.RadioButton();
             this.radioButtonGenderMale = new System.Windows.Forms.RadioButton();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.buttonApplayChanges = new System.Windows.Forms.Button();
-            this.groupBoxDebugMode = new System.Windows.Forms.GroupBox();
-            this.checkBoxDebugMode = new System.Windows.Forms.CheckBox();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxLogs = new System.Windows.Forms.TextBox();
             this.groupBoxLogs = new System.Windows.Forms.GroupBox();
-            this.buttonPlaySample = new System.Windows.Forms.Button();
+            this.buttonStop = new System.Windows.Forms.Button();
+            this.buttonResume = new System.Windows.Forms.Button();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonPauseSample = new System.Windows.Forms.Button();
+            this.buttonResumeSample = new System.Windows.Forms.Button();
+            this.buttonStopSample = new System.Windows.Forms.Button();
             this.tabControlManualPlayer.SuspendLayout();
             this.tabPageManualPlayer.SuspendLayout();
             this.groupBoxPlayer.SuspendLayout();
             this.tabPageProperties.SuspendLayout();
             this.groupBoxPlayerProperties.SuspendLayout();
-            this.groupBoxGender.SuspendLayout();
             this.groupBoxDebugMode.SuspendLayout();
+            this.groupBoxGender.SuspendLayout();
             this.groupBoxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +90,9 @@
             // 
             // groupBoxPlayer
             // 
+            this.groupBoxPlayer.Controls.Add(this.buttonPause);
+            this.groupBoxPlayer.Controls.Add(this.buttonResume);
+            this.groupBoxPlayer.Controls.Add(this.buttonStop);
             this.groupBoxPlayer.Controls.Add(this.labelInstructions);
             this.groupBoxPlayer.Controls.Add(this.buttonClear);
             this.groupBoxPlayer.Controls.Add(this.textBoxUserInput);
@@ -106,7 +115,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(458, 91);
+            this.buttonClear.Location = new System.Drawing.Point(539, 91);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 4;
@@ -123,7 +132,7 @@
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(539, 91);
+            this.buttonPlay.Location = new System.Drawing.Point(214, 91);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(75, 23);
             this.buttonPlay.TabIndex = 3;
@@ -143,6 +152,9 @@
             // 
             // tabPageProperties
             // 
+            this.tabPageProperties.Controls.Add(this.buttonPauseSample);
+            this.tabPageProperties.Controls.Add(this.buttonResumeSample);
+            this.tabPageProperties.Controls.Add(this.buttonStopSample);
             this.tabPageProperties.Controls.Add(this.buttonPlaySample);
             this.tabPageProperties.Controls.Add(this.groupBoxPlayerProperties);
             this.tabPageProperties.Controls.Add(this.buttonApplayChanges);
@@ -155,6 +167,16 @@
             this.tabPageProperties.UseVisualStyleBackColor = true;
             this.tabPageProperties.Leave += new System.EventHandler(this.tabPageProperties_Leave);
             // 
+            // buttonPlaySample
+            // 
+            this.buttonPlaySample.Location = new System.Drawing.Point(243, 276);
+            this.buttonPlaySample.Name = "buttonPlaySample";
+            this.buttonPlaySample.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlaySample.TabIndex = 7;
+            this.buttonPlaySample.Text = "Play Sample";
+            this.buttonPlaySample.UseVisualStyleBackColor = true;
+            this.buttonPlaySample.Click += new System.EventHandler(this.buttonPlaySample_Click);
+            // 
             // groupBoxPlayerProperties
             // 
             this.groupBoxPlayerProperties.Controls.Add(this.groupBoxDebugMode);
@@ -165,6 +187,27 @@
             this.groupBoxPlayerProperties.TabIndex = 6;
             this.groupBoxPlayerProperties.TabStop = false;
             this.groupBoxPlayerProperties.Text = "Player properties";
+            // 
+            // groupBoxDebugMode
+            // 
+            this.groupBoxDebugMode.Controls.Add(this.checkBoxDebugMode);
+            this.groupBoxDebugMode.Location = new System.Drawing.Point(15, 166);
+            this.groupBoxDebugMode.Name = "groupBoxDebugMode";
+            this.groupBoxDebugMode.Size = new System.Drawing.Size(94, 66);
+            this.groupBoxDebugMode.TabIndex = 2;
+            this.groupBoxDebugMode.TabStop = false;
+            this.groupBoxDebugMode.Text = "Debug Mode:";
+            this.groupBoxDebugMode.Enter += new System.EventHandler(this.SetingsChanged);
+            // 
+            // checkBoxDebugMode
+            // 
+            this.checkBoxDebugMode.AutoSize = true;
+            this.checkBoxDebugMode.Location = new System.Drawing.Point(22, 30);
+            this.checkBoxDebugMode.Name = "checkBoxDebugMode";
+            this.checkBoxDebugMode.Size = new System.Drawing.Size(48, 17);
+            this.checkBoxDebugMode.TabIndex = 0;
+            this.checkBoxDebugMode.Text = "True";
+            this.checkBoxDebugMode.UseVisualStyleBackColor = true;
             // 
             // groupBoxGender
             // 
@@ -222,16 +265,6 @@
             this.radioButtonGenderMale.Text = "Male";
             this.radioButtonGenderMale.UseVisualStyleBackColor = true;
             // 
-            // buttonClose
-            // 
-            this.buttonClose.Location = new System.Drawing.Point(597, 446);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 23);
-            this.buttonClose.TabIndex = 0;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
             // buttonApplayChanges
             // 
             this.buttonApplayChanges.Location = new System.Drawing.Point(565, 276);
@@ -242,26 +275,15 @@
             this.buttonApplayChanges.UseVisualStyleBackColor = true;
             this.buttonApplayChanges.Click += new System.EventHandler(this.buttonApplayChanges_Click);
             // 
-            // groupBoxDebugMode
+            // buttonClose
             // 
-            this.groupBoxDebugMode.Controls.Add(this.checkBoxDebugMode);
-            this.groupBoxDebugMode.Location = new System.Drawing.Point(15, 166);
-            this.groupBoxDebugMode.Name = "groupBoxDebugMode";
-            this.groupBoxDebugMode.Size = new System.Drawing.Size(94, 66);
-            this.groupBoxDebugMode.TabIndex = 2;
-            this.groupBoxDebugMode.TabStop = false;
-            this.groupBoxDebugMode.Text = "Debug Mode:";
-            this.groupBoxDebugMode.Enter += new System.EventHandler(this.SetingsChanged);
-            // 
-            // checkBoxDebugMode
-            // 
-            this.checkBoxDebugMode.AutoSize = true;
-            this.checkBoxDebugMode.Location = new System.Drawing.Point(22, 30);
-            this.checkBoxDebugMode.Name = "checkBoxDebugMode";
-            this.checkBoxDebugMode.Size = new System.Drawing.Size(48, 17);
-            this.checkBoxDebugMode.TabIndex = 0;
-            this.checkBoxDebugMode.Text = "True";
-            this.checkBoxDebugMode.UseVisualStyleBackColor = true;
+            this.buttonClose.Location = new System.Drawing.Point(597, 446);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 0;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // textBoxLogs
             // 
@@ -284,15 +306,65 @@
             this.groupBoxLogs.TabStop = false;
             this.groupBoxLogs.Text = "Logs:";
             // 
-            // buttonPlaySample
+            // buttonStop
             // 
-            this.buttonPlaySample.Location = new System.Drawing.Point(484, 276);
-            this.buttonPlaySample.Name = "buttonPlaySample";
-            this.buttonPlaySample.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlaySample.TabIndex = 7;
-            this.buttonPlaySample.Text = "Play Sample";
-            this.buttonPlaySample.UseVisualStyleBackColor = true;
-            this.buttonPlaySample.Click += new System.EventHandler(this.buttonPlaySample_Click);
+            this.buttonStop.Location = new System.Drawing.Point(458, 91);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(75, 23);
+            this.buttonStop.TabIndex = 5;
+            this.buttonStop.Text = "Stop";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
+            // buttonResume
+            // 
+            this.buttonResume.Location = new System.Drawing.Point(296, 91);
+            this.buttonResume.Name = "buttonResume";
+            this.buttonResume.Size = new System.Drawing.Size(75, 23);
+            this.buttonResume.TabIndex = 6;
+            this.buttonResume.Text = "Resume";
+            this.buttonResume.UseVisualStyleBackColor = true;
+            this.buttonResume.Click += new System.EventHandler(this.buttonResume_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.Location = new System.Drawing.Point(377, 91);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(75, 23);
+            this.buttonPause.TabIndex = 7;
+            this.buttonPause.Text = "Pause";
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonPauseSample
+            // 
+            this.buttonPauseSample.Location = new System.Drawing.Point(405, 276);
+            this.buttonPauseSample.Name = "buttonPauseSample";
+            this.buttonPauseSample.Size = new System.Drawing.Size(75, 23);
+            this.buttonPauseSample.TabIndex = 10;
+            this.buttonPauseSample.Text = "Pause";
+            this.buttonPauseSample.UseVisualStyleBackColor = true;
+            this.buttonPauseSample.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonResumeSample
+            // 
+            this.buttonResumeSample.Location = new System.Drawing.Point(324, 276);
+            this.buttonResumeSample.Name = "buttonResumeSample";
+            this.buttonResumeSample.Size = new System.Drawing.Size(75, 23);
+            this.buttonResumeSample.TabIndex = 9;
+            this.buttonResumeSample.Text = "Resume";
+            this.buttonResumeSample.UseVisualStyleBackColor = true;
+            this.buttonResumeSample.Click += new System.EventHandler(this.buttonResume_Click);
+            // 
+            // buttonStopSample
+            // 
+            this.buttonStopSample.Location = new System.Drawing.Point(484, 276);
+            this.buttonStopSample.Name = "buttonStopSample";
+            this.buttonStopSample.Size = new System.Drawing.Size(75, 23);
+            this.buttonStopSample.TabIndex = 8;
+            this.buttonStopSample.Text = "Stop";
+            this.buttonStopSample.UseVisualStyleBackColor = true;
+            this.buttonStopSample.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // SpeachLibraryTestForm
             // 
@@ -310,10 +382,10 @@
             this.groupBoxPlayer.PerformLayout();
             this.tabPageProperties.ResumeLayout(false);
             this.groupBoxPlayerProperties.ResumeLayout(false);
-            this.groupBoxGender.ResumeLayout(false);
-            this.groupBoxGender.PerformLayout();
             this.groupBoxDebugMode.ResumeLayout(false);
             this.groupBoxDebugMode.PerformLayout();
+            this.groupBoxGender.ResumeLayout(false);
+            this.groupBoxGender.PerformLayout();
             this.groupBoxLogs.ResumeLayout(false);
             this.groupBoxLogs.PerformLayout();
             this.ResumeLayout(false);
@@ -344,6 +416,12 @@
         public System.Windows.Forms.TextBox textBoxLogs;
         private System.Windows.Forms.GroupBox groupBoxLogs;
         private System.Windows.Forms.Button buttonPlaySample;
+        private System.Windows.Forms.Button buttonStop;
+        private System.Windows.Forms.Button buttonResume;
+        private System.Windows.Forms.Button buttonPause;
+        private System.Windows.Forms.Button buttonPauseSample;
+        private System.Windows.Forms.Button buttonResumeSample;
+        private System.Windows.Forms.Button buttonStopSample;
     }
 }
 

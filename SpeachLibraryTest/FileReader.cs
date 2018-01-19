@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpeachLibraryTest
 {
-    class FileReader
+    public class FileReader
     {
 
     }

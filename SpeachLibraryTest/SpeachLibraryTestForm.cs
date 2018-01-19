@@ -14,6 +14,7 @@ namespace SpeachLibraryTest
 {
     public partial class SpeachLibraryTestForm : Form
     {
+        public Prompt prompt;
         public bool propertieChanged; //Indicates that one of the program properties was changed by user
         public bool isDebug; //This flag specifies debug mode, meaning logs will be written into Output console
         private SpeechSynthesizer speechSynthesizer; //Provides access to the functionality of an installed a speech synthesis engine.
@@ -175,7 +176,9 @@ namespace SpeachLibraryTest
 
                 //Task.Factory.StartNew(() => { speechSynthesizer.Speak(phrase); });
 
-                ThreadPool.QueueUserWorkItem(state => speechSynthesizer.Speak(phrase));
+                //ThreadPool.QueueUserWorkItem(state => speechSynthesizer.Speak(phrase));
+
+                prompt = speechSynthesizer.SpeakAsync(phrase);
             }
             else
             {
@@ -251,6 +254,35 @@ namespace SpeachLibraryTest
         {
             WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, propertieChanged.ToString()); //Debug only
             PlayText(sender, true);
+        }
+
+        /// <summary>
+        /// Stop playing text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
+            //speechSynthesizer.Pause();
+            speechSynthesizer.SpeakAsyncCancel(prompt);
+        }
+
+        /// <summary>
+        /// Resume playing text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonResume_Click(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
+            speechSynthesizer.Resume();
+        }
+
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            WriteDebug(sender, System.Reflection.MethodBase.GetCurrentMethod().Name, e.ToString()); //Debug only
+            speechSynthesizer.Pause();
         }
 
         //End of class
